@@ -79,7 +79,7 @@ class Register extends React.Component {
                                 <label class="db fw6 lh-copy f6" for="password">Password</label>
                                 <input
                                     class="b pa2 input-reset ba bg-transparent hover-bg-white hover-black w-100"
-                                    type="password" name="password" id="password"
+                                    type="password" name="password" 
                                     onChange={this.onPasswordChange}
                                 />
                             </div>
@@ -87,7 +87,7 @@ class Register extends React.Component {
                                 <label class="db fw6 lh-copy f6" for="password">Confirm Password</label>
                                 <input
                                     class="b pa2 input-reset ba bg-transparent hover-bg-white hover-black w-100"
-                                    type="password" name="password" id="password"
+                                    type="password" name="password" 
                                     onChange={this.onCPasswordChange}
                                 />
                             </div>
