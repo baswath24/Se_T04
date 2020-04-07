@@ -30,7 +30,7 @@ class Register extends React.Component {
     //this.props.onRouteChange('signin')
     onSignup = () => {
         if (this.state.sigInPassword === this.state.sigInCPassword) {
-            fetch('http://localhost:3000/register', {
+            fetch('/register', {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

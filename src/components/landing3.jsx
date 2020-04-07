@@ -22,7 +22,7 @@ class FilteredListNGO extends Component {
         this.onsignin();
     }
     onsignin() {
-        fetch('http://localhost:3000/profile', {
+        fetch('/profile', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: this.state.sigInName })
@@ -58,7 +58,7 @@ class FilteredListNGO extends Component {
         document.getElementById("eventDesc").value = '';
         if (eventName !== '' && eventDescription !== '') {
 
-            fetch('http://localhost:3000/addevent', {
+            fetch('/addevent', {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
