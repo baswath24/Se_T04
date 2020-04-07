@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import Signin from './components/signin/signin';
 import FilteredList from './components/landing';
 import FilteredList2 from './components/landing2';
+import FilteredListNGO from './components/landing3';
 import Register from './components/signin/register';
 import 'tachyons';
 const particlesOptions = {
@@ -24,13 +25,23 @@ class App extends Component {
     super();
     this.state = {
       route: 'signin',
-      role: 'signin'
+      user: {
+        name: 'karthik',
+        email: 'karthik@gmail.com'
+      }
     }
   }
-  onRouteChange = (route, role) => {
+
+
+
+  onRouteChange = (route) => {
     this.setState({ route: route });
-    this.setState({ role: role });
+
   }
+  loadUser = (name, email) => {
+    this.setState({ user: { name, email } });
+  }
+
 
 
   render() {
@@ -44,19 +55,25 @@ class App extends Component {
         />
         {this.state.route === 'signin' ?
           <div >
-            <Logo />
-            <Signin onRouteChange={this.onRouteChange} onRoleChange={this.onRoleChange} /></div> :
-          this.state.route === 'signup' ?
-            <div>
+            <div className='m-5'>
               <Logo />
+            </div>
+            <Signin onRouteChange={this.onRouteChange} loadUser={this.loadUser} /></div> :
+          this.state.route === 'signup' ?
+            <div className='float-left'>
+
+              <Logo />
+
               <Register onRouteChange={this.onRouteChange} /></div> :
             this.state.route === 'dl' ?
-              <FilteredList /> :
+              <FilteredList n={this.state.user} /> :
               this.state.route === 'vl' ?
-                <FilteredList2 /> :
-                <div >
-                  <Logo />
-                  <Signin onRouteChange={this.onRouteChange} onRoleChange={this.onRoleChange} /></div>
+                <FilteredList2 n={this.state.user} /> :
+                this.state.route === 'nl' ?
+                  <FilteredListNGO n={this.state.user} /> :
+                  <div >
+                    <Logo />
+                    <Signin onRouteChange={this.onRouteChange} onRoleChange={this.onRoleChange} /></div>
         }
       </div>
     );

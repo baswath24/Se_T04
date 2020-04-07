@@ -38,8 +38,11 @@ class FilteredList2 extends Component {
                     <div class="bg-dark p-4">
                         <h4 class="text-white">
                             <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">profile</a>
+                                <li class="m-3 nav-item">
+                                    {this.props.n.name}
+                                </li>
+                                <li class="m-3 nav-item">
+                                    {this.props.n.email}
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">donation history</a>

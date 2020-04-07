@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 
 class FilteredList extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
 
         this.state = {
@@ -39,16 +39,23 @@ class FilteredList extends Component {
         this.setState({ uitems: updatedList });;
 
     }
+    //<a class="nav-link active" href="#" >profile</a>
 
     render() {
+
+
         return (<div>
+            <p></p>
             <div class="pos-f-t m-2">
                 <div class="collapse" id="navbarToggleExternalContent">
                     <div class="bg-dark p-4">
                         <h4 class="text-white">
                             <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">profile</a>
+                                <li class="m-3 nav-item">
+                                    {this.props.n.name}
+                                </li>
+                                <li class="m-3 nav-item">
+                                    {this.props.n.email}
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">donation history</a>
@@ -82,23 +89,26 @@ class FilteredList extends Component {
                         />
                     </fieldset>
                 </form>
-                <ul className="filter-list">
-                    {this.state.uitems.map(function (item) {
-                        return <li className="list-group-item" data-category={item} key={item}>
-                            {item}
-                            <div>
-                                <button type="button" class="btn btn-primary m-2">
-                                    Donate Money
+                <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+                    <ul className="filter-list">
+                        {this.state.uitems.map(function (item) {
+                            return <li className="list-group-item" data-category={item} key={item}>
+                                {item}
+                                <div>
+                                    <button type="button" class="btn btn-primary m-2">
+                                        Donate Money
                   </button>
-                                <button type="button" class="btn btn-primary">
-                                    Donate Goodies
+                                    <button type="button" class="btn btn-primary">
+                                        Donate Goodies
                   </button>
-                            </div>
-                        </li>
-                    }
-                    )
-                    }
-                </ul>
+                                </div>
+                            </li>
+                        }
+                        )
+                        }
+                    </ul>
+                </div>
+
             </div>
         </div >
         );
