@@ -19,7 +19,7 @@ class Signin extends React.Component {
 
     onSubmitSignin = () => {
         page = this.state.Role;
-        fetch('https://channelngo2.herokuapp.com/signin', {
+        fetch('https://powerful-stream-13986.herokuapp.com/signin', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

@@ -30,7 +30,7 @@ class Register extends React.Component {
     //this.props.onRouteChange('signin')
     onSignup = () => {
         if (this.state.sigInPassword === this.state.sigInCPassword) {
-            fetch('https://channelngo2.herokuapp.com/register', {
+            fetch('https://powerful-stream-13986.herokuapp.com/register', {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

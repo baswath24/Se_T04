@@ -22,7 +22,7 @@ class FilteredListNGO extends Component {
         this.onsignin();
     }
     onsignin() {
-        fetch('https://channelngo2.herokuapp.com/profile', {
+        fetch('https://powerful-stream-13986.herokuapp.com/profile', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: this.state.sigInName })
@@ -58,7 +58,7 @@ class FilteredListNGO extends Component {
         document.getElementById("eventDesc").value = '';
         if (eventName !== '' && eventDescription !== '') {
 
-            fetch('https://channelngo2.herokuapp.com/addevent', {
+            fetch('https://powerful-stream-13986.herokuapp.com/addevent', {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
