@@ -28,9 +28,10 @@ class Register extends React.Component {
         console.log(data);
     }
     //this.props.onRouteChange('signin')
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
     onSignup = () => {
         if (this.state.sigInPassword === this.state.sigInCPassword) {
-            fetch('https://powerful-stream-13986.herokuapp.com/register', {
+            fetch(proxyurl+'https://powerful-stream-13986.herokuapp.com/register', {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
