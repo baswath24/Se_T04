@@ -98,9 +98,20 @@ class FilteredList extends Component {
                                     <button type="button" class="btn btn-primary m-2">
                                         Donate Money
                   </button>
-                                    <button type="button" class="btn btn-primary">
+                                  /*  <button type="button" class="btn btn-primary">
                                         Donate Goodies
-                  </button>
+                  </button>*/
+                                    <div className="float-right">
+                <h2>Donate Goodies</h2>
+                <label>clothes</label> <input type="number" id="clothes"/>&nbsp;<label>pc.</label><br/>
+                <label>rice</label> <input type="number" id="rice"/> &nbsp;<label>kg.</label> <br/>
+                <label>pulses</label> <input type="number" id="pulses"/> &nbsp;<label>kg.</label> <br/>
+                <label>shoes</label> <input type="number" id="shoes"/> &nbsp;<label>pc.</label> <br/>
+                <label>toys</label> <input type="number" id="toys"/> &nbsp;<label>pc.</label> <br/>
+                <label>sanitizers</label> <input type="number" id="sanitizers"/> &nbsp;<label>pc.</label> <br/>
+                
+                <button type="submit"><b>Confirm</b></button>
+            </div>
                                 </div>
                             </li>
                         }
