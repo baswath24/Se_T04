@@ -34,7 +34,9 @@ class Register extends React.Component {
         if (this.state.sigInPassword === this.state.sigInCPassword) {
             fetch(proxyurl+'https://powerful-stream-13986.herokuapp.com/register', {
                 method: 'post',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json',
+                         'Accept': 'application/json'
+                         },
                 body: JSON.stringify({
                     name: this.state.sigInName,
                     email: this.state.sigInEmail,
